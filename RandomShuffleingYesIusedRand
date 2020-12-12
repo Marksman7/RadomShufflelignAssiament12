@@ -1,0 +1,75 @@
+#include<vector>
+#include <iostream>
+#include <set>
+#include <string>
+#include <time.h>
+using namespace std;
+
+/*
+vector<int>* Name(int);
+
+vector<int>* Name(int here)
+{
+
+
+    return Name(1);
+}
+*/
+
+int main()
+{
+
+    srand((unsigned int)time(NULL));
+
+    bool no = true;
+
+    bool nots = false;
+
+    vector<int> indices;
+
+    std::string s = "";
+
+    std::string newish = "";
+
+    std::cin >> s;
+
+    int Long = 0;
+    Long = s.length();
+
+    int num;
+
+    indices.resize(Long);
+
+    for (int i = 0; i < Long; i++)
+    {
+        indices[i] = Long + 1;
+    }
+
+
+    for (int i = 0; i < (Long); i++)
+    {
+        no = true;
+        while (no == true)
+        {
+            num = rand() % (Long);
+
+            if (indices[num] == (Long + 1))
+            {
+                indices[num] = i;
+                no = false;
+            }
+        }
+
+
+        
+            
+    }
+
+    for (int q = 0; q < Long; q++)
+    {
+        newish += s.at(indices[q]);
+    }
+
+    //vector<int>* Name(Long*);
+    std::cout << newish << std::endl;
+}
